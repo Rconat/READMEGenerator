@@ -46,7 +46,7 @@ This application is licensed under ${license}.
 
 ## Questions
 
-If you have any questions about this project you can contact me through [Github](https://github.com/${github} or send me an email at ${email}.
+If you have any questions about this project you can contact me through [Github](https://github.com/${github}) or send me an email at ${email}.
 `
 }
 
