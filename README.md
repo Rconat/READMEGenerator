@@ -1,45 +1,63 @@
-# Sample Project
+# README Generator
+## Description 
 
-## Description
+The purpose of this project is to provide a way to automatically generate a README file through console commands via the terminal. This project can generate an effective README for any project and by any user.
 
-This is a sample project to show the functionality of the README generator project that I have created
+You can find the repo on [GitHub](https://github.com/Rconat/READMEGenerator).
 
 ---
 
-## Table of contents
+Terminal Prompts
+![Terminal Prompts](assets/terminal.jpg)
 
-* [installation](#installation)
+Sample Walkthrough - Click the .gif below for the full video
+[![Walkthrough](assets/readmeWalkthrough.gif)](https://drive.google.com/file/d/1fpMLjkk2Hz4oaXqGShHWY1CuqcnQZLg5/view?usp=sharing)
+
+Sample README
+![Sample README](assets/sample.jpg)
+
+---
+
+## Table of Contents
+
+* [Installation](#installation)
+* [List of Files](#List-of-Files)
 * [Usage](#usage)
 * [Credits](#credits)
-* [License](#license)
-* [Questions](#questions)
+
+---
+## Installation
+This project requires Node.js to run. It also requires the use of the inquirer, fs, and util node packages. To install them  run the following command in the terminal in the project file.
+
+    npm install inquirer fs util
 
 ---
 
-## Installation
+## List of Files
 
-npm i inquirer util fs
+<ul>
+    <li>index.js</li>
+    <li>generateMarkdown.js</li>
+    <li>package-lock.json</li>
+    <li>package.json</li>
+    <li>README.md</li>
+    <li>readmeWalkthrough.gif</li>
+    <li>sample.jpg</li>
+    <li>sample.md</li>
+    <li>terminal.jpg</li>
+</ul>
 
 ---
 
 ## Usage
+This project can be used to easily create a readme file for any project. A user must first head to their terminal in this projects folder file. From there the user will enter the following code in their terminal.
 
-This is the sample project to show how to use the readme generator to create a README.md file through the use of the terminal commands and node.js
+    node index.js
+
+Upon entering this command and hitting the "Enter" key the user will be prompted with a set of questions about the project. When the user has finished answering all the questions the program will respond with 'Successfully wrote to README.md' and the readme will be created.
 
 ---
 
 ## Credits
 
-This project was created by Ryan Conat through the Trinity Coding Bootcamp program offered through Northwestern University
-
----
-
-## License
-
-This application is licensed under Apache.
-
----
-
-## Questions
-
-If you have any questions about this project you can contact me through [Github](https://github.com/Rconat or send me an email at ryan.conat@gmail.com.
+This project was created my Ryan Conat working alongside professors and TAs through Trinity and Northwestern Coding Bootcamp to provide the assignment parameters.
