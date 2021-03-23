@@ -1,10 +1,11 @@
 const inquirer = require("inquirer")
 const fs = require('fs')
+const util = require('util')
 const writeFileAsync = util.promisify(fs.writeFile)
-// const generateMarkdown = require("./generateMarkdown")
+const generateMarkdown = require("./generateMarkdown")
 
 // creating an array of questions to be answered by the user through the terminal
-const userPrompt = () => {
+function userPrompt() {
     inquirer.prompt([
         {
             type: 'input',
@@ -48,10 +49,10 @@ const userPrompt = () => {
             choices: ["Apache", "MIT", "ISC"]
         }
     ])
+    .then((data) => writeFileAsync('README.md', generateMarkdown(data)))
+    .then(() => console.log('Successfully wrote to README.md'))
+    .catch((err) => console.log(err))
 }
 
 // call the userPrompt function to start the questions in Node
-// userPrompt()
-//     .then((data) => writeFileAsync('README.md', generateMarkdown(data)))
-//     .then(() => console.log('Successfully wrote to README.md'))
-//     .catch((err) => console.log(err))
+userPrompt()
